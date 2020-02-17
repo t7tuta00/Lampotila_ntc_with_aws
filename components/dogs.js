@@ -33,7 +33,7 @@ router.get('/id', (req, res) => {
 */
 router.post('/post', (req, res) => {
 
-    db.query('INSERT INTO lampotila (id, state, temp) VALUES (?,?,?,?,?,?)', [req.body.id, req.body.StateInfo, req.body.state, req.body.stateDescription, req.body.time, req.body.temp])
+    db.query('INSERT INTO lampotila (id, Temp) VALUES (?,?)', [req.body.id, req.body.Temp])
     .then(results => {
         console.log(results);
         res.sendStatus(201);
