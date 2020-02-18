@@ -6,7 +6,7 @@ try {
     host            : 'database-1.cgy1u7m6licr.us-east-1.rds.amazonaws.com',
     user            : 'admin',
     password        : '12341234',
-    database        : 'database-1'
+    database        : 'db'
   });
 
 } catch (error) {

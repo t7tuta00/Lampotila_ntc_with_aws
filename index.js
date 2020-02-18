@@ -30,7 +30,7 @@ app.put('/hello', (req, res) => res.send('Hello PUT World!'));
 app.delete('/hello', (req, res) => res.send('Hello DELETE World!')); */
 
 app.post('/rb', (req, res) => {
-  db.query('INSERT INTO lampotila(State, Temp) VALUES (?,?)', [req.body.State, req.body.Temp])
+  db.query('INSERT INTO lampotila(Temp) VALUES (?)', [req.body.Temp])
   .then(results => {
 	console.log("toimii");
 	res.sendStatus(201);
@@ -75,7 +75,6 @@ Promise.all(
     [
         db.query(`CREATE TABLE IF NOT EXISTS lampotila(
             id INT AUTO_INCREMENT PRIMARY KEY,
-            State VARCHAR(32),
             Temp INT(10)
         )`)
         // Add more table create statements if you need more tables
