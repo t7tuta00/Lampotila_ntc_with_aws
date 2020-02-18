@@ -5,7 +5,7 @@ const router = express.Router();
 //  Return all dog information
 router.get('/', (req, res) => {
     db.query('SELECT * FROM lampotila').then(results => {
-        res.json({ patient: results})
+        res.json({ lampotila: results})
     })
     .catch(() => {
         res.sendStatus(500);

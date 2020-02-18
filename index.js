@@ -24,13 +24,13 @@ app.use(cors())
 
 
 /* basic HTTP method handling */
-/*app.get('/hello', (req, res) => res.send('Hello GET World!'));
+app.get('/hello', (req, res) => res.send('Hello GET World!'));
 app.post('/hello', (req, res) => res.send('Hello POST World!'));
 app.put('/hello', (req, res) => res.send('Hello PUT World!'));
-app.delete('/hello', (req, res) => res.send('Hello DELETE World!')); */
+app.delete('/hello', (req, res) => res.send('Hello DELETE World!')); 
 
 app.post('/rb', (req, res) => {
-  db.query('INSERT INTO lampotila(Temp) VALUES (?)', [req.body.Temp])
+  db.query('INSERT INTO lampotila(id,Temp) VALUES (?,?)', [req.body.id,req.body.Temp])
   .then(results => {
 	console.log("toimii");
 	res.sendStatus(201);
