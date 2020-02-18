@@ -6,7 +6,11 @@ try {
     host            : 'database-1.cgy1u7m6licr.us-east-1.rds.amazonaws.com',
     user            : 'admin',
     password        : '12341234',
+<<<<<<< HEAD
     database        : 'innodb'
+=======
+    database        : 'db'
+>>>>>>> c74406edbb10a4914f167881c13367477c8505bf
   });
 
 } catch (error) {
