@@ -4,8 +4,8 @@ try {
   pool  = mysql.createPool({
     connectionLimit : 10,
     host            : 'database-1.cgy1u7m6licr.us-east-1.rds.amazonaws.com',
-    user            : 'admin',
-    password        : '12341234',
+    user            : '******',
+    password        : '******',
     database        : 'db'
   });
 
